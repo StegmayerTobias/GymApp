@@ -1,0 +1,12 @@
+{% extends 'basePreLogin.html' %} {% block content %}
+
+<form action="" method="POST">
+  {% csrf_token %} {{form.as_p}} {{err}}
+  <input type="text" name="username" placeholder="Ingrese su nombre" />
+  <input type="email" name="email" placeholder="Ingresar correo electrónico" />
+  <input type="password" name="password1" placeholder="Ingresar contraseña" />
+  <input type="password" name="password2" placeholder="Confirmar contraseña" />
+  <button>signup</button>
+</form>
+
+{% endblock %}
