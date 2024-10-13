@@ -14,8 +14,11 @@ python manage.py runserver
 
 ## Superusuario
 Crear superusuario para entrar al perfil del staff
+
 python manage.py createsuperuser 
 
 Superusuario de prueba:
+
 email: staff1@gmail.com
+
 contraseña: 123
