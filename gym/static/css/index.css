@@ -113,7 +113,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(100dvh - 52px);
+
   display: flex;
 
   gap: 40px;
@@ -124,6 +124,8 @@ header {
   align-items: center;
   flex-direction: column;
   background-image: url(../images/levantamiento.png);
+
+  height: calc(100dvh - 52px);
 }
 
 .mainPostLogin {
@@ -132,6 +134,8 @@ header {
   justify-content: baseline;
   align-items: center;
   flex-direction: column;
+  height: 100%;
+  padding-bottom: 59px;
 }
 
 .container-btn-ingresar {
@@ -341,6 +345,13 @@ form button {
   font-size: 16px;
   color: var(--grey-100);
 }
+
+.tera {
+  font-family: var(--font-lexand-tera);
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .info {
   font-family: var(--font-red-hat);
   font-weight: 400;
@@ -390,6 +401,7 @@ form button {
   padding-block: 8px;
   height: fit-content;
   margin: 0;
+  z-index: 1;
 }
 
 .navigation li {
@@ -415,4 +427,135 @@ form button {
   position: relative;
   padding: 0;
   left: 13px;
+}
+
+.cabecera__rutina {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.container__ejercicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.ejercicio {
+  background-image: url(../images/exerciseExample.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 570px;
+  min-height: 350px;
+  height: 100%;
+  position: relative;
+}
+
+.ejercicio__titulo {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  background-color: #00000099;
+  backdrop-filter: blur(4px);
+  padding: 8px 15px;
+}
+
+.ejercicio__titulo h1 {
+  color: var(--grey-100);
+  font-family: var(--font-lexand-tera);
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.ejercicio__titulo p {
+  color: var(--grey-100);
+  font-family: var(--font-lexand-tera);
+  font-weight: 300;
+  font-size: 8px;
+}
+
+.wrapped {
+  padding: 40px 20px;
+  display: grid;
+  gap: 38px;
+}
+
+.indicaciones {
+  font-family: var(--font-lexand-tera);
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--primary);
+  align-self: start;
+}
+
+.ejercicio__explicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-inline: 9px;
+  width: 100%;
+  max-width: 570px;
+}
+
+.lista__explicacion {
+  display: flex;
+  gap: 9px;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.lista__explicacion li {
+  border-left: 1px solid #747272;
+  padding-left: 12px !important;
+}
+
+.circulo {
+  height: 27px;
+  width: 27px;
+  position: relative;
+  top: 0;
+
+  left: -25px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-black);
+  font-family: var(--font-lexand-tera);
+  font-size: 12px;
+  font-weight: 400;
+  border: 2px solid #000;
+}
+
+.explicacion {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #95959530;
+  background-color: #232222;
+  border-radius: 11px;
+}
+
+.explicacion h3 {
+  font-family: var(--font-lexand-tera);
+  color: var(--grey-100);
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.explicacion p {
+  font-family: var(--font-lexand-tera);
+  color: var(--grey-100);
+  font-weight: 300;
+  font-size: 9px;
 }

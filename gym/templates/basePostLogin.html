@@ -343,17 +343,14 @@
       { apellido: "Martinez", nombre: "Maria" },
     ];
 
-    const ul = document.getElementById("alumnos");
+    let listaAlumnos = document.getElementById("alumnos");
 
     alumnos.forEach((alumno) => {
-      ul.innerHTML += `
-      <li>
-        <a href="alumno/?nombre=${encodeURIComponent(
-          alumno.nombre
-        )}&apellido=${encodeURIComponent(alumno.apellido)}">
-        <span>${alumno.apellido}, </span>${alumno.nombre}
-        </a>
-      </li>`;
+      listaAlumnos.innerHTML += `<li><a href="alumno/?nombre=${encodeURIComponent(
+        alumno.nombre
+      )}&apellido=${encodeURIComponent(alumno.apellido)}"><span>${
+        alumno.apellido
+      }, </span>${alumno.nombre}</a></li>`;
     });
   </script>
   <script>
