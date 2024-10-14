@@ -570,8 +570,8 @@ form button {
   font-size: 9px;
 }
 
-.navigation li a .active {
-  color: var(--primary);
+.active {
+  color: var(--primary) !important;
 }
 
 .alumnos {

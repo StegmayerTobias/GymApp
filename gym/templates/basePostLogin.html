@@ -372,26 +372,31 @@
 
     const nombreAlumno = getQueryParam("nombre");
     const apellidoAlumno = getQueryParam("apellido");
-    document.getElementById("nombre").textContent = nombreAlumno;
-    document.getElementById("apellido").textContent = apellidoAlumno;
+    document.getElementById("nombre_alumno").textContent = nombreAlumno;
+    document.getElementById("apellido_alumno").textContent = apellidoAlumno;
   </script>
 
   <script>
     function updateActiveNav() {
       const currentPath = window.location.pathname;
-
+      console.log(currentPath);
       const navItems = {
-        "/home/rutina/": document.getElementById("rutina"),
-        "/home/": document.getElementById("inicio"),
-        "/alumnos_staff/": document.getElementById("alumnos_staff"),
+        "{% url 'rutina' %}": document.getElementById("rutina"),
+        "{% url 'home' %}": document.getElementById("inicio"),
+        "{% url 'alumnos_staff' %}": document.getElementById("alumnos_staff"),
       };
+      console.log(navItems[currentPath]);
 
       Object.values(navItems).forEach((item) => {
         item.classList.remove("active");
       });
 
-      if (navItems[currentPath]) {
-        navItems[currentPath].classList.add("active");
+      const activeId = navItems[currentPath];
+      if (activeId) {
+        const activeItem = document.getElementById(activeId);
+        if (activeItem) {
+          activeItem.classList.add("active");
+        }
       }
     }
 
