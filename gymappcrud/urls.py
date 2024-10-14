@@ -20,9 +20,13 @@ from gym import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.ingresar),
+    path('', views.ingresar, name='ingresar'),
     path('signup/', views.signup, name='signup'),
-    path('loguot/', views.signout, name='logout'),
+    path('logout/', views.signout, name='logout'),
     path('signin/', views.signin, name='signin'),
+    path('alumnos_staff/', views.alumnos_staff, name='alumnos_staff'),
+    path('alumnos_staff/alumno/', views.perfilAlumno_staff, name='alumno'),
     path('home/', views.home, name='home'),
+    path('home/rutina/', views.rutina, name='rutina'),
+   
 ]

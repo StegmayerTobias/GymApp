@@ -1,12 +1,57 @@
 {% extends 'basePreLogin.html' %} {% block content %}
 
-<form action="" method="POST">
-  {% csrf_token %} {{form.as_p}} {{err}}
-  <input type="text" name="username" placeholder="Ingrese su nombre" />
-  <input type="email" name="email" placeholder="Ingresar correo electrónico" />
-  <input type="password" name="password1" placeholder="Ingresar contraseña" />
-  <input type="password" name="password2" placeholder="Confirmar contraseña" />
-  <button>signup</button>
+<form action="" method="POST" class="formulario" autocomplete="off">
+  {% csrf_token %}
+  <span class="error__msg">{{err}}</span>
+  <div class="input__field">
+    <input
+      type="text"
+      name="first_name"
+      id="nombre"
+      required=""
+      class="input__form" />
+    <label for="nombre">Ingresar nombre</label>
+  </div>
+
+  <div class="input__field">
+    <input
+      type="text"
+      name="last_name"
+      id="apellido"
+      required=""
+      class="input__form" />
+    <label for="apellido">Ingresar apellido</label>
+  </div>
+
+  <div class="input__field">
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required=""
+      class="input__form" />
+    <label for="email">Ingresar correo electrónico</label>
+  </div>
+
+  <div class="input__field">
+    <input
+      type="password"
+      name="password1"
+      id="password1"
+      required=""
+      class="input__form" />
+    <label for="password1">Ingresar contraseña</label>
+  </div>
+  <div class="input__field">
+    <input
+      type="password"
+      name="password2"
+      id="password2"
+      required=""
+      class="input__form" />
+    <label for="password2">Confirmar contraseña</label>
+  </div>
+  <button>Sign Up</button>
 </form>
 
 {% endblock %}

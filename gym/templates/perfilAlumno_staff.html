@@ -1,0 +1,37 @@
+{% extends 'basePostLogin.html' %} {% block content %}
+<section>
+  <div>
+    {% load static %}
+    <img
+      src="{% static 'images/fotoPerfil.png' %}"
+      alt="Foto de perfil"
+      title="{{user.first_name}}" />
+    <div>
+      <p>Alumno <span>{{user.first_name}}, {{user.last_name}}</span></p>
+    </div>
+    <p>Esta es su información actual:</p>
+  </div>
+</section>
+<section>
+  <div>
+    <h1><span>Plan</span> Musculación 5 días</h1>
+  </div>
+  <ul>
+    <li><span>Pago: </span>al día</li>
+    <li><span>Debe: </span>-$</li>
+    <li><span>Vence: </span>29/10/2024</li>
+    <li><span>Estado de la cuenta: </span>asiste</li>
+  </ul>
+</section>
+<section>
+  <div>
+    {% load static %}
+    <img
+      src="{% static 'images/wapLogo.png' %}"
+      alt="Logo
+    whatsapp" />
+    <p>Enviar alerta pro whatsapp</p>
+  </div>
+</section>
+
+{% endblock %}

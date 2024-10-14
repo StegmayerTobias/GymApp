@@ -1,9 +1,26 @@
 {% extends 'basePreLogin.html' %} {% block content %}
+<form action="" method="POST" autocomplete="off">
+  {% csrf_token %}
+  <span class="error__msg">{{err}}</span>
+  <div class="input__field">
+    <input
+      type="email"
+      name="username"
+      id="username"
+      required=""
+      class="input__form" />
+    <label for="username">Ingresar correo electrónico</label>
+  </div>
+  <div class="input__field">
+    <input
+      type="password"
+      name="password"
+      id="password"
+      required=""
+      class="input__form" />
+    <label for="password">Ingresar contraseña</label>
+  </div>
 
-<form action="" method="POST">
-  {% csrf_token %} {{form.as_p}} {{err}}
-  <input type="email" name="email" placeholder="Ingresar correo electrónico" />
-  <input type="password" name="password" placeholder="Ingresar contraseña" />
   <button>signup</button>
 </form>
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
@@ -22,20 +22,22 @@ def signup(request):
     else:
         if request.POST['password1'] == request.POST['password2']:
             try:
+               
                 user = User.objects.create_user(
-                    username=request.POST['username'], email=request.POST['email'], password=request.POST['password1'])
+                    username=request.POST['email'],   
+                    first_name=request.POST['first_name'], last_name=request.POST['last_name'],email=request.POST['email'], password=request.POST['password1'])
                 user.save()
                 login(request, user)
-                return redirect('home')
+                return redirect('signin')
             except IntegrityError:
                 return render(request, 'signup.html', {'err': 'El usuario ya existe'})
 
-        return render(request, 'signup.html', {'form': UserCreationForm, 'err': 'Las contraseñas no coinciden'})
+        return render(request, 'signup.html', {'err': 'Las contraseñas no coinciden'})
 
 
 def signout(request):
     logout(request)
-    return redirect('signup.html')
+    return redirect('ingresar')
 
 
 def signin(request):
@@ -43,9 +45,22 @@ def signin(request):
         return render(request, 'signin.html')
     else:
         user = authenticate(
-            request, email=request.POST['email'], password=request.POST['password'])
+            request, username=request.POST['username'], password=request.POST['password'])
+        print(user)
         if user is None:
             return render(request, 'signin.html', {'err': 'Usuario o contraseña incorrecto'})
         else:
             login(request, user)
-            return redirect('home.html')
+            if request.user.is_superuser:
+                return redirect('alumnos_staff')
+            else:
+                return redirect('home')
+
+def rutina(request):
+    return render(request, 'rutina.html')
+
+def alumnos_staff(request):
+    return render(request, 'alumnos_staff.html')
+
+def perfilAlumno_staff(request):
+   return render(request, 'perfilAlumno_staff.html')
