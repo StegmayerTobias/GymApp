@@ -122,7 +122,7 @@
           </svg>
           <p>Planes</p>
         </li>
-        <li id="inicio">
+        <li>
           <svg
             width="25"
             height="25"
@@ -131,45 +131,49 @@
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M9.39581 2.9583L3.78123 7.3333C2.84373 8.06247 2.08331 9.61455 2.08331 10.7916V18.5104C2.08331 20.9271 4.05206 22.9062 6.46873 22.9062H18.5312C20.9479 22.9062 22.9166 20.9271 22.9166 18.5208V10.9375C22.9166 9.67705 22.0729 8.06247 21.0416 7.34372L14.6041 2.8333C13.1458 1.81247 10.8021 1.86455 9.39581 2.9583Z"
-              stroke="#E6FE58"
+              stroke="#fff"
               stroke-width="1.5"
               stroke-linecap="round"
               stroke-linejoin="round" />
-            <path d="M12.5 18.7396V15.6146V18.7396Z" fill="#E6FE58" />
+            <path d="M12.5 18.7396V15.6146V18.7396Z" fill="#fff" />
             <path
               d="M12.5 18.7396V15.6146"
-              stroke="#E6FE58"
+              stroke="#fff"
               stroke-width="1.5"
               stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-          <p>Inicio</p>
+          <p id="inicio">Inicio</p>
         </li>
-        <li id="alumnos">
-          <svg
-            width="26"
-            height="26"
-            viewBox="0 0 26 26"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <rect width="26" height="26" fill="url(#pattern0_14_960)" />
-            <defs>
-              <pattern
-                id="pattern0_14_960"
-                patternContentUnits="objectBoundingBox"
-                width="1"
-                height="1">
-                <use xlink:href="#image0_14_960" transform="scale(0.0111111)" />
-              </pattern>
-              <image
-                id="image0_14_960"
-                width="90"
-                height="90"
-                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAklEQVR4nO3cS4tcRRgG4NKoGBcK3kG8hOhWXIgoGhDRoAuX3l0IKgFd+BdcioJR1BBEV17+gODGlUSNxEvEaxgjuAuY0UQEb1EfKU4tRIwy4/Sp6qrvgbOZbpiul+rq6q++PimFEEIIIYQQQlg7XIqH8So+xLf4tVyr5W/5sYewdR3/Ylw4CffgHWv3Nu7GptrjaBpuxor/7wC21x5Pc3AaXrDxnsfm2uNrAs7FBxbnPZyTRmYKOb/NF+3AsGGblotFzuR/mtmnptFYzJr8X3ankWC7em5JA+2TVyoG/cUQ+2zcq747U++wt3bKeCsNULtowR/YknplKhC1YkfqlanS1oqXU6+wXzveT70y1ZBb8U3qFX7Rjp9TrzQm9UpjUq80JvVKrNGzBb2qHV3vOvZrR9f76Fe046XUK1OjSyu6rnVsLZWz2vJruCT1zPo6kDbantQ7U8tWbben3mHTTL0cx/PZEGeGGW6qGPQNaSSmvri57UqjwebSPTSXd4fsVMpyP9xM63Xu5Tg7jcwU9r4Fz+QxGxyPs4zsXkDIu4ZdLv4Nbixv843Ywo21u1jnPvuu3E20xq/r+bl7cAdOrD2OpYItufiTezBKL/VqOeDN1+Fc6iyP7ei+dhFCCCGEEEIIw8AZuAYP4im8XipwuZx6CD+V61Cpi+wtz9mJB3A1Tq89jubg/HJg+yK+snEOll/n5rrJeWlEuAKP41PzyAWnj/EYLk89w0V4pNyep7ZcRn0Ul6Ve4Dq81kiH0t/l1/QGbsUJadngFNyPTyyPj3AfTk7LoMyOLy2vFdzW7AzHVeVUpBdv4srU2G0h8gfLb/rzO56uvpzk46Nyr7ne7cs3DKgV8vU4ahxHsG3ukLeVr8Gj+RHXzhXyWeUEelSHceYcQT9Ze6QNeGKOoGveeKoVn88RdF6nRvfDHEF/XXuUDTg4R9DP1B5lA3bOEfQF+M64juLChQf9lx/7fG88R2ZvBy6dns+VXcgx/TpWxvgsLp415BBCCCGEEEIIIYTUpj8BC/LLBrcKHY4AAAAASUVORK5CYII=" />
-            </defs>
-          </svg>
-          <p>Alumnos</p>
+        <li>
+          <a href="{% url 'alumnos_staff' %}">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="26" height="26" fill="url(#pattern0_14_960)" />
+              <defs>
+                <pattern
+                  id="pattern0_14_960"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1">
+                  <use
+                    xlink:href="#image0_14_960"
+                    transform="scale(0.0111111)" />
+                </pattern>
+                <image
+                  id="image0_14_960"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAklEQVR4nO3cS4tcRRgG4NKoGBcK3kG8hOhWXIgoGhDRoAuX3l0IKgFd+BdcioJR1BBEV17+gODGlUSNxEvEaxgjuAuY0UQEb1EfKU4tRIwy4/Sp6qrvgbOZbpiul+rq6q++PimFEEIIIYQQQlg7XIqH8So+xLf4tVyr5W/5sYewdR3/Ylw4CffgHWv3Nu7GptrjaBpuxor/7wC21x5Pc3AaXrDxnsfm2uNrAs7FBxbnPZyTRmYKOb/NF+3AsGGblotFzuR/mtmnptFYzJr8X3ankWC7em5JA+2TVyoG/cUQ+2zcq747U++wt3bKeCsNULtowR/YknplKhC1YkfqlanS1oqXU6+wXzveT70y1ZBb8U3qFX7Rjp9TrzQm9UpjUq80JvVKrNGzBb2qHV3vOvZrR9f76Fe046XUK1OjSyu6rnVsLZWz2vJruCT1zPo6kDbantQ7U8tWbben3mHTTL0cx/PZEGeGGW6qGPQNaSSmvri57UqjwebSPTSXd4fsVMpyP9xM63Xu5Tg7jcwU9r4Fz+QxGxyPs4zsXkDIu4ZdLv4Nbixv843Ywo21u1jnPvuu3E20xq/r+bl7cAdOrD2OpYItufiTezBKL/VqOeDN1+Fc6iyP7ei+dhFCCCGEEEIIw8AZuAYP4im8XipwuZx6CD+V61Cpi+wtz9mJB3A1Tq89jubg/HJg+yK+snEOll/n5rrJeWlEuAKP41PzyAWnj/EYLk89w0V4pNyep7ZcRn0Ul6Ve4Dq81kiH0t/l1/QGbsUJadngFNyPTyyPj3AfTk7LoMyOLy2vFdzW7AzHVeVUpBdv4srU2G0h8gfLb/rzO56uvpzk46Nyr7ne7cs3DKgV8vU4ahxHsG3ukLeVr8Gj+RHXzhXyWeUEelSHceYcQT9Ze6QNeGKOoGveeKoVn88RdF6nRvfDHEF/XXuUDTg4R9DP1B5lA3bOEfQF+M64juLChQf9lx/7fG88R2ZvBy6dns+VXcgx/TpWxvgsLp415BBCCCGEEEIIIYTUpj8BC/LLBrcKHY4AAAAASUVORK5CYII=" />
+              </defs>
+            </svg>
+            <p id="alumnos_staff" class="active">Alumnos</p>
+          </a>
         </li>
         <li id="buscar">
           <svg
@@ -227,54 +231,60 @@
           </svg>
           <p>Nutrición</p>
         </li>
-        <li id="rutina">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <rect width="28" height="28" fill="url(#pattern0_14_959)" />
-            <defs>
-              <pattern
-                id="pattern0_14_959"
-                patternContentUnits="objectBoundingBox"
-                width="1"
-                height="1">
-                <use xlink:href="#image0_14_959" transform="scale(0.0111111)" />
-              </pattern>
-              <image
-                id="image0_14_959"
-                width="90"
-                height="90"
-                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB20lEQVR4nO3cQU5DMQxF0YzYej/7pLAMIySQigSVXfsZ/3DPPOi+0EkQsBYAAAAAAAAAAAAGMLMnM3s2s1dzWPoej6uZHR/t6yw+g92WvifiWGfh/SR/aeiJeFtnERxm/61n22E2rGfbYTasZ9thNqxn22E2rGfbYTasJ/zoOMswK+qRPHY8jw71sCpVPZLHjufRoR5WpapH8tgRB30TjhNs8fRkzqbi1MOqVPVItqiDUnGCLZ6ezNlUnHpYlaoeyRZ1UCpOsMXTkzmbilMPq1LVI9miDkrFCbZ4ejJnU3HqYVWqeiRb1EGpOMEWT0/mbDiiKmgyyV1NC5qAi27CRTfhoptw0U246CZcdBMuugkX3YSLbsJFN+n8cQU/VPpB6kJ/0/mdX2JVPZIt6qBUnGCLpydzNhWnHlalqkeyRR2UihNs8fRkzqbi1MOqVPVItqiDUnGCLZ6ezNlUnHpYlaoeyRZ1UCpOsMXTkzl7L+6qDErFxbeEJL7OyyNx/CJ6/KIv68E/rTjufbLvnA1ZYlU94/6OfNeLHmfaMBvWs+0wG9az7TAb1rPtMBvWs+0wG9ZTxvPYudXQExF/dPyVk/+rn8s6C89j51ZDz57/vAoAAAAAAAAAAGDt7B3neuwr8xdGhgAAAABJRU5ErkJggg==" />
-            </defs>
-          </svg>
-          <p>Rutina</p>
+        <li>
+          <a href="{% url 'rutina' %}">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="28" height="28" fill="url(#pattern0_14_959)" />
+              <defs>
+                <pattern
+                  id="pattern0_14_959"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1">
+                  <use
+                    xlink:href="#image0_14_959"
+                    transform="scale(0.0111111)" />
+                </pattern>
+                <image
+                  id="image0_14_959"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB20lEQVR4nO3cQU5DMQxF0YzYej/7pLAMIySQigSVXfsZ/3DPPOi+0EkQsBYAAAAAAAAAAAAGMLMnM3s2s1dzWPoej6uZHR/t6yw+g92WvifiWGfh/SR/aeiJeFtnERxm/61n22E2rGfbYTasZ9thNqxn22E2rGfbYTasJ/zoOMswK+qRPHY8jw71sCpVPZLHjufRoR5WpapH8tgRB30TjhNs8fRkzqbi1MOqVPVItqiDUnGCLZ6ezNlUnHpYlaoeyRZ1UCpOsMXTkzmbilMPq1LVI9miDkrFCbZ4ejJnU3HqYVWqeiRb1EGpOMEWT0/mbDiiKmgyyV1NC5qAi27CRTfhoptw0U246CZcdBMuugkX3YSLbsJFN+n8cQU/VPpB6kJ/0/mdX2JVPZIt6qBUnGCLpydzNhWnHlalqkeyRR2UihNs8fRkzqbi1MOqVPVItqiDUnGCLZ6ezNlUnHpYlaoeyRZ1UCpOsMXTkzl7L+6qDErFxbeEJL7OyyNx/CJ6/KIv68E/rTjufbLvnA1ZYlU94/6OfNeLHmfaMBvWs+0wG9az7TAb1rPtMBvWs+0wG9ZTxvPYudXQExF/dPyVk/+rn8s6C89j51ZDz57/vAoAAAAAAAAAAGDt7B3neuwr8xdGhgAAAABJRU5ErkJggg==" />
+              </defs>
+            </svg>
+            <p id="rutina">Rutina</p></a
+          >
         </li>
-        <li id="inicio">
-          <svg
-            width="25"
-            height="25"
-            viewBox="0 0 25 25"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M9.39581 2.9583L3.78123 7.3333C2.84373 8.06247 2.08331 9.61455 2.08331 10.7916V18.5104C2.08331 20.9271 4.05206 22.9062 6.46873 22.9062H18.5312C20.9479 22.9062 22.9166 20.9271 22.9166 18.5208V10.9375C22.9166 9.67705 22.0729 8.06247 21.0416 7.34372L14.6041 2.8333C13.1458 1.81247 10.8021 1.86455 9.39581 2.9583Z"
-              stroke="#E6FE58"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M12.5 18.7396V15.6146V18.7396Z" fill="#E6FE58" />
-            <path
-              d="M12.5 18.7396V15.6146"
-              stroke="#E6FE58"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <p>Inicio</p>
+        <li>
+          <a href="{% url 'home' %}">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.39581 2.9583L3.78123 7.3333C2.84373 8.06247 2.08331 9.61455 2.08331 10.7916V18.5104C2.08331 20.9271 4.05206 22.9062 6.46873 22.9062H18.5312C20.9479 22.9062 22.9166 20.9271 22.9166 18.5208V10.9375C22.9166 9.67705 22.0729 8.06247 21.0416 7.34372L14.6041 2.8333C13.1458 1.81247 10.8021 1.86455 9.39581 2.9583Z"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M12.5 18.7396V15.6146V18.7396Z" fill="#fff" />
+              <path
+                d="M12.5 18.7396V15.6146"
+                stroke="#fff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <p id="inicio">Inicio</p></a
+          >
         </li>
         <li id="perfil">
           <svg
@@ -343,16 +353,17 @@
       { apellido: "Martinez", nombre: "Maria" },
     ];
 
-    let listaAlumnos = document.getElementById("alumnos");
+    let listaAlumnos = document.getElementById("alumnosList");
 
     alumnos.forEach((alumno) => {
-      listaAlumnos.innerHTML += `<li><a href="alumno/?nombre=${encodeURIComponent(
+      listaAlumnos.innerHTML += `<li class="alumno__container"><a href="alumno/?nombre=${encodeURIComponent(
         alumno.nombre
       )}&apellido=${encodeURIComponent(alumno.apellido)}"><span>${
         alumno.apellido
       }, </span>${alumno.nombre}</a></li>`;
     });
   </script>
+
   <script>
     function getQueryParam(param) {
       const urlParams = new URLSearchParams(window.location.search);
@@ -363,5 +374,27 @@
     const apellidoAlumno = getQueryParam("apellido");
     document.getElementById("nombre").textContent = nombreAlumno;
     document.getElementById("apellido").textContent = apellidoAlumno;
+  </script>
+
+  <script>
+    function updateActiveNav() {
+      const currentPath = window.location.pathname;
+
+      const navItems = {
+        "/home/rutina/": document.getElementById("rutina"),
+        "/home/": document.getElementById("inicio"),
+        "/alumnos_staff/": document.getElementById("alumnos_staff"),
+      };
+
+      Object.values(navItems).forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      if (navItems[currentPath]) {
+        navItems[currentPath].classList.add("active");
+      }
+    }
+
+    window.addEventListener("load", updateActiveNav);
   </script>
 </html>

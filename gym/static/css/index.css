@@ -113,9 +113,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   display: flex;
-
   gap: 40px;
 }
 
@@ -134,7 +132,7 @@ header {
   justify-content: baseline;
   align-items: center;
   flex-direction: column;
-  height: 100%;
+  height: calc(100dvh - 52px);
   padding-bottom: 59px;
 }
 
@@ -285,7 +283,7 @@ form {
 .input__field input:focus ~ label,
 .input__field input:valid ~ label {
   transform: translateY(-51%) translateX(-10px) scale(0.8);
-  padding: 0px 5px;
+  padding: 0;
   color: var(--primary);
   opacity: 0.8;
   font-weight: bold;
@@ -295,6 +293,11 @@ form {
   font-family: var(--font-red-hat);
   text-wrap: nowrap;
   text-transform: uppercase;
+}
+
+.input__field input:focus ~ .email,
+.input__field input:valid ~ .email {
+  transform: translateY(-51%) translateX(-18px) scale(0.8) !important;
 }
 
 form button {
@@ -405,15 +408,22 @@ form button {
 }
 
 .navigation li {
+  cursor: pointer;
+  width: 50px;
+}
+.navigation li a,
+.navigation li {
+  cursor: pointer;
+  width: 50px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
-.navigation li p {
+.navigation li p,
+.navigation li a p {
   font-family: var(--font-red-hat);
   font-size: 12px;
   color: var(--grey-100);
@@ -482,7 +492,7 @@ form button {
 }
 
 .wrapped {
-  padding: 40px 20px;
+  padding: 40px 20px 80px 20px;
   display: grid;
   gap: 38px;
 }
@@ -558,4 +568,59 @@ form button {
   color: var(--grey-100);
   font-weight: 300;
   font-size: 9px;
+}
+
+.navigation li a .active {
+  color: var(--primary);
+}
+
+.alumnos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+  padding-block: 40px;
+  width: 100%;
+}
+
+.alumno__container {
+  background: linear-gradient(
+    90deg,
+    rgba(230, 254, 88, 0.3) 0%,
+    rgba(117, 129, 45, 0.3) 20.36%,
+    rgba(45, 45, 45, 0.3) 64%
+  );
+  background-blend-mode: luminosity;
+
+  padding: 5px 35px;
+  color: var(--grey-100);
+  font-family: var(--font-red-hat);
+  font-weight: 300;
+  font-size: 12px;
+}
+.alumnosList {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 5px;
+  cursor: pointer;
+}
+.alumno__container span {
+  font-weight: 700;
+}
+
+.gap-10 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.center__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs-16 {
+  font-size: 16px;
 }
