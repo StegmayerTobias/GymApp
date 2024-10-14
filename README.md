@@ -8,7 +8,9 @@ python -m venv venv
 venv\Scripts\activate
 
 O en Visual Studio, click en f1
->Python Select Interpreter
+
+">Python Select Interpreter"
+
 Y cambiar al que dice venv
 
 ### Instalar dependencias
