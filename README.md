@@ -6,6 +6,11 @@ Aplicación para gym con autenticación. Django + JS
 python -m venv venv
 ### Activar el entorno
 venv\Scripts\activate
+
+O en Visual Studio, click en f1
+>Python Select Interpreter
+Y cambiar al que dice venv
+
 ### Instalar dependencias
 pip install -r requirements.txt
 
