@@ -132,7 +132,7 @@ header {
   justify-content: baseline;
   align-items: center;
   flex-direction: column;
-  height: 100dvh;
+  height: calc(100dvh - 52px);
   padding-bottom: 59px;
 }
 
