@@ -1,31 +1,50 @@
 # GymApp
-Aplicación para gym con autenticación. Django + JS
+
+Aplicación para gym con autenticación de usuario. Modulo para staff y modulo para alumnos.
+
+## Tecnologías
+
+- **HTML**
+- **CSS** 
+- **JavaScript** 
+- **django**
 
 ## Instalación
-### Crear un entorno virtual
-python -m venv venv
-### Activar el entorno
-venv\Scripts\activate
 
-O en Visual Studio, click en f1
+Clona el repositorio localmente.
 
-">Python Select Interpreter"
+Crea un entorno virtual y activalo.
 
-Y cambiar al que dice venv
+```bash
+  python -m venv venv
+ 
+  venv/Scripts/activate
+```
 
-### Instalar dependencias
-pip install -r requirements.txt
+O en Visual Studio, click en f1, **">Python Select Interpreter"**, cambiar al que dice **venv**.
+
+Instalar dependencias
+
+```bash
+ pip install -r requirements.txt
+```
 
 ## Ejecución
-python manage.py runserver
+
+```bash
+ python manage.py runserver
+```
 
 ## Superusuario
-Crear superusuario para entrar al perfil del staff
-
-python manage.py createsuperuser 
-
 Superusuario de prueba:
 
-email: staff1@gmail.com
+- email: staff1@gmail.com
 
-contraseña: 123
+- contraseña: 123
+  
+O crear un nuevo superusuario para entrar al perfil del staff
+
+```bash
+ python manage.py createsuperuser 
+```
+
