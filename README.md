@@ -38,13 +38,9 @@ Instalar dependencias
 ## Superusuario
 Superusuario de prueba:
 
-- email: staff@gmail.com
+- email: staffUser@gmail.com
 
-- contraseña: 1234
+- contraseña: staff
   
-O crear un nuevo superusuario para entrar al perfil del staff
-
-```bash
- python manage.py createsuperuser 
-```
+  
 
