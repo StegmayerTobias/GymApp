@@ -645,6 +645,32 @@ form button {
   font-size: 16px;
 }
 
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #95959530;
+  border-radius: 23px;
+  background-color: #232222;
+  color: #e6fe58;
+  text-align: center;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.popup.open {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.popup.close {
+  transform: translate(-50%, 150%);
+  opacity: 0;
+}
+
 @media (min-width: 654px) {
   .wrapped {
     padding: 40px 0 80px 0;

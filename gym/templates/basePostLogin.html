@@ -65,10 +65,13 @@
       </svg>
     </header>
 
+    <div id="popup" class="popup">
+      <p>Próximamente</p>
+    </div>
     <nav>
       <ul class="navigation">
         {% if user.is_staff %}
-        <li id="nutricion">
+        <li id="nutricion" onclick="showPopup()">
           <svg
             width="28"
             height="28"
@@ -96,7 +99,7 @@
           </svg>
           <p>Nutrición</p>
         </li>
-        <li id="planes">
+        <li id="planes" onclick="showPopup()">
           <svg
             width="28"
             height="28"
@@ -122,7 +125,7 @@
           </svg>
           <p>Planes</p>
         </li>
-        <li>
+        <li onclick="showPopup()">
           <svg
             width="25"
             height="25"
@@ -175,7 +178,7 @@
             <p id="alumnos_staff" class="active">Alumnos</p>
           </a>
         </li>
-        <li id="buscar">
+        <li id="buscar" onclick="showPopup()">
           <svg
             width="27"
             height="27"
@@ -203,7 +206,7 @@
         </li>
         <!-- <li><a href="/logout">Logout</a></li> -->
         {% else %}
-        <li id="nutricion">
+        <li id="nutricion" onclick="showPopup()">
           <svg
             width="28"
             height="28"
@@ -286,7 +289,7 @@
             <p id="inicio">Inicio</p></a
           >
         </li>
-        <li id="perfil">
+        <li id="perfil" onclick="showPopup()">
           <svg
             width="26"
             height="26"
@@ -312,7 +315,7 @@
           </svg>
           <p>Perfil</p>
         </li>
-        <li id="buscar">
+        <li id="buscar" onclick="showPopup()">
           <svg
             width="27"
             height="27"
@@ -401,5 +404,20 @@
     }
 
     window.addEventListener("load", updateActiveNav);
+  </script>
+
+  <script>
+    function showPopup() {
+      const popup = document.getElementById("popup");
+
+      popup.classList.add("open");
+
+      setTimeout(() => {
+        popup.classList.remove("open");
+        popup.classList.add("close");
+      }, 1500);
+
+      window.onload = showPopup;
+    }
   </script>
 </html>
