@@ -94,6 +94,25 @@ select {
   --font-lexand-deca: "Lexend Deca", serif;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #232222;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #95959530;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   background-color: var(--grey-600);
 }
@@ -132,8 +151,9 @@ header {
   justify-content: baseline;
   align-items: center;
   flex-direction: column;
-  height: calc(100dvh - 52px);
-  padding-bottom: 59px;
+  height: calc(100dvh - 52px - 67px);
+  overflow: hidden;
+  /* padding-bottom: 15px; */
 }
 
 .container-btn-ingresar {
@@ -623,4 +643,10 @@ form button {
 
 .fs-16 {
   font-size: 16px;
+}
+
+@media (min-width: 654px) {
+  .wrapped {
+    padding: 40px 0 80px 0;
+  }
 }
