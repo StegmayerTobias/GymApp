@@ -16,7 +16,7 @@ Clona el repositorio localmente.
 Crea un entorno virtual y activalo.
 
 ```bash
-  python -m venv venv
+  python -m venv env
  
   venv/Scripts/activate
 ```
