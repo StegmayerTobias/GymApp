@@ -38,9 +38,9 @@ Instalar dependencias
 ## Superusuario
 Superusuario de prueba:
 
-- email: staff1@gmail.com
+- email: staff@gmail.com
 
-- contraseña: 123
+- contraseña: 1234
   
 O crear un nuevo superusuario para entrar al perfil del staff
 
